@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.root 
+{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+h1 {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 700;
+  }
+
+h3 {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.chem h1
+ {
+ 
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+ 
+
+h6 {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.nav.ul {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p 
+  {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+
+  }
+
+ul 
+  {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+  }
+
+.btn  
+{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-weight: 300;
+
+}
+
+  

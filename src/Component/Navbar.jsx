@@ -1,0 +1,100 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Wrapper from '../Component/wrapper';
+
+const Navbar = () => {
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleDropdown = (menu) => {
+    setActiveDropdown((prev) => (prev === menu ? null : menu));
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prev) => !prev);
+  };
+
+  const menuItems = {
+    Resources: [
+      { label: 'Method Development and Validation', link: '/about' },
+      { label: 'Pollutants Research', link: '/team' },
+      { label: 'Food Contaminants Research', link: '/history' },
+      { label: 'Phytochemical Research', link: '/history' },
+    ],
+    Products: [
+      { label: 'Chemxpert', link: '/consulting' },
+      { label: 'Labsoft', link: '/training' },
+    ],
+    Contact: [],
+  };
+
+  return (
+    <header className="bg-black text-white font-sans shadow-lg sticky top-0 left-0 w-full z-50">
+      <Wrapper>
+        <nav className="flex justify-between items-center px-4 lg:px-16 py-5">
+          {/* Logo */}
+          <div>
+            <Link to="/">
+              <p className="text-2xl font-bold sm:text-xl">
+                labwox<span className="text-red-600 text-3xl font-extrabold sm:text-2xl">.</span>
+              </p>
+            </Link>
+          </div>
+
+          {/* Hamburger Menu for Mobile */}
+          <div className="lg:hidden">
+            <button
+              onClick={toggleMobileMenu}
+              className="text-white focus:outline-none"
+              aria-label="Toggle Menu"
+            >
+              <span className="text-3xl">☰</span>
+            </button>
+          </div>
+
+          {/* Navigation Links */}
+          <div
+            className={`lg:flex flex-col lg:flex-row lg:gap-8 items-center absolute lg:static bg-black w-full lg:w-auto transition-all duration-300 ease-in-out ${
+              isMobileMenuOpen ? 'top-16 left-0' : 'top-[-500px] left-0'
+            }`}
+          >
+            <ul className="flex flex-col lg:flex-row gap-6 text-sm font-medium lg:items-center px-4 lg:px-0">
+              {Object.keys(menuItems).map((menu) => (
+                <li key={menu} className="relative group">
+                  {/* Dropdown Toggle */}
+                  <button
+                    className="flex items-center capitalize focus:outline-none hover:text-red-500"
+                    onClick={() => toggleDropdown(menu)}
+                  >
+                    {menu}
+                    {menuItems[menu].length > 0 && (
+                      <span
+                        className={`ml-2 transform transition-transform ${
+                          activeDropdown === menu ? 'rotate-180' : ''
+                        }`}
+                      >
+                        ▼
+                      </span>
+                    )}
+                  </button>
+                  {/* Dropdown Menu */}
+                  {activeDropdown === menu && menuItems[menu].length > 0 && (
+                    <ul className="absolute top-full left-0 bg-black text-white mt-2 py-2 shadow-lg rounded-lg z-50 w-48">
+                      {menuItems[menu].map((item) => (
+                        <li key={item.label} className="py-2 px-4 hover:bg-gray-800 rounded-lg">
+                          <Link to={item.link}>{item.label}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+      </Wrapper>
+    </header>
+  );
+};
+
+export default Navbar;
