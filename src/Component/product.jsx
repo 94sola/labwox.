@@ -1,43 +1,63 @@
-import React from 'react'; 
-import chemxpert from '../assets/image/chemxpert.jpg';
-import chem from '../assets/image/chemxpert-imge.jpg';
+import hero from "../assets/image/hero-bg.jpg";
 
-const Chemxpert = () => {
+function Hero() {
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col px-4">
-      {/* Logo at the Top Right */}
-      <div className="justify-start w-full mt-3 mb-4 sm:mb-8">
-        <img
-          src={chemxpert}
-          alt="Chemxpert Logo"
-          className="w-auto h-[200px] md:h-[300px] lg:h-[400px] object-contain"
-        />
-      </div>
+    <div className="relative bg-black text-white overflow-hidden min-h-screen">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 w-full h-full bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${hero})`,
+        }}
+      ></div>
 
-      {/* Image and Text Section */}
-      <div className="flex flex-col items-center lg:items-end pr-5 w-full mt-4 lg:mt-8">
-        {/* Image on the Left */}
-        <div className="w-full lg:w-[80%]">
-          <img
-            src={chem}
-            alt="Chemxpert"
-            className="w-full h-[300px] md:h-[500px] lg:h-[700px] object-cover rounded-2xl mx-auto"
-          />
+      {/* Overlay Effect */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/20"></div>
+
+      {/* Text Section */}
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4 lg:px-8">
+        <div className="max-w-7xl">
+          <h1 className=" chem text-7xl sm:text-9xl md:text-8xl font-extrabold leading-tight font-serif mb-4 lg:mb-6 text-transparent bg-clip-text bg-white animate-fade-in">
+            ChemXPERT
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl leading-relaxed text-white/90 mb-6 lg:mb-8 animate-fade-in delay-150">
+            Drive impactful discoveries and partner with us on your research journey.
+          </p>
+          <button className="px-3 md:px-4 py-1.5 md:py-2 bg-black text-white font-semibold rounded-full hover:bg-red-900 transition duration-300 text-base md:text-lg lg:text-xl mt-3">
+          Learn  more
+        </button>
         </div>
       </div>
 
-      {/* Text Below the Image */}
-      <div className="w-full lg:w-[70%] mt-6 sm:mt-8 md:mt-16 pl-6 md:pl-14 pb-4 sm:pb-5">
-        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[70px] font-normal font-serif mb-3 leading-relaxed">
-          Drive impactful discoveries and partner with us on your research journey.
-        </h3>
+      {/* Animation Styles */}
+      <style>
+        {`
+          @keyframes fade-in {
+            from {
+              opacity: 0;
+              transform: translateY(10px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
 
-        <button className="px-3 md:px-4 py-1.5 md:py-2 bg-black text-white font-semibold rounded-full hover:bg-red-900 transition duration-300 text-base md:text-lg lg:text-xl mt-3">
-          Start a Project
-        </button>
-      </div>
+          .animate-fade-in {
+            animation: fade-in 1s ease-in-out forwards;
+          }
+
+          .delay-150 {
+            animation-delay: 0.15s;
+          }
+
+          .delay-300 {
+            animation-delay: 0.3s;
+          }
+        `}
+      </style>
     </div>
   );
-};
+}
 
-export default Chemxpert;
+export default Hero;

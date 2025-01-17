@@ -29,17 +29,11 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-black text-white font-sans shadow-lg sticky top-0 left-0 w-full z-50">
+    <header className="bg-black text-white font-serif shadow-lg sticky top-0 left-0 w-full z-50">
       <Wrapper>
-        <nav className="flex justify-between items-center px-4 lg:px-16 py-5">
+        <nav className="flex justify-between items-center px-4 lg:px-16 py-8">
           {/* Logo */}
-          <div>
-            <Link to="/">
-              <p className="text-2xl font-bold sm:text-xl">
-                labwox<span className="text-red-600 text-3xl font-extrabold sm:text-2xl">.</span>
-              </p>
-            </Link>
-          </div>
+          
 
           {/* Hamburger Menu for Mobile */}
           <div className="lg:hidden">
@@ -54,11 +48,20 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div
-            className={`lg:flex flex-col lg:flex-row lg:gap-8 items-center absolute lg:static bg-black w-full lg:w-auto transition-all duration-300 ease-in-out ${
+            className={`lg:flex flex-col lg:flex-row lg:gap-8 items-center absolute lg:static bg-black w-full lg:w-auto transition-all duration-300 ease-in-out lg:ml-auto ${
               isMobileMenuOpen ? 'top-16 left-0' : 'top-[-500px] left-0'
             }`}
           >
-            <ul className="flex flex-col lg:flex-row gap-6 text-sm font-medium lg:items-center px-4 lg:px-0">
+            <ul className="flex flex-col lg:flex-row gap-6 text-sm font-medium lg:items-center px-4 lg:px-0 lg:ml-auto">
+              {/* Home Link */}
+              <li>
+                <Link
+                  to="/"
+                  className="capitalize focus:outline-none hover:text-red-500"
+                >
+                  Home
+                </Link>
+              </li>
               {Object.keys(menuItems).map((menu) => (
                 <li key={menu} className="relative group">
                   {/* Dropdown Toggle */}
@@ -81,7 +84,10 @@ const Navbar = () => {
                   {activeDropdown === menu && menuItems[menu].length > 0 && (
                     <ul className="absolute top-full left-0 bg-black text-white mt-2 py-2 shadow-lg rounded-lg z-50 w-48">
                       {menuItems[menu].map((item) => (
-                        <li key={item.label} className="py-2 px-4 hover:bg-gray-800 rounded-lg">
+                        <li
+                          key={item.label}
+                          className="py-2 px-4 hover:bg-gray-800 rounded-lg"
+                        >
                           <Link to={item.link}>{item.label}</Link>
                         </li>
                       ))}
