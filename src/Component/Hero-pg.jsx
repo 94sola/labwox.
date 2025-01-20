@@ -6,9 +6,9 @@ const Hero = () => {
   return (
     <div className="bg-black text-white min-h-screen flex flex-col px-4">
       {/* Logo at the Top */}
-      <div className="  mt-4 md:mt-6 lg:mt-8 font-bold font-serif" >
+      <div className=" pl-6 mt-2 md:mt-4 lg:mt-6" >
         <Link to="/">
-          <h1 className="text-[200px] font-serif">LABWOX<span className="text-red-600">.</span></h1>
+          <h1 className="lab text-[250px]">labwox<span className="text-red-600">.</span></h1>
         </Link>
       </div>
 

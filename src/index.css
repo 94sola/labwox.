@@ -66,5 +66,10 @@ ul
 }  
 
 
-
+.lab h1 
+{
+  font-family: "League Spartan", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+}
   
