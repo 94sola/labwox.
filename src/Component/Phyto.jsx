@@ -2,7 +2,9 @@
 
 const Phyto = () => {
     return (
-        <div></div>
+        <div className="h-lvh bg-green-500">
+
+        </div>
     )
 };
 

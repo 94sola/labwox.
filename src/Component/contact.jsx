@@ -1,12 +1,12 @@
 
 
 
-const Contact = () => {
+const  Contact = () => {
     return (
-        <div className="bg-">
+        <div className="bg-red-400 h-lvh">
 
         </div>
     )
 };
 
-export default Contact
+export default  Contact;

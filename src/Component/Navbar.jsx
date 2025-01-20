@@ -16,25 +16,21 @@ const Navbar = () => {
 
   const menuItems = {
     Resources: [
-      { label: 'Method Development and Validation', link: '/about' },
-      { label: 'Pollutants Research', link: '/team' },
-      { label: 'Food Contaminants Research', link: '/history' },
-      { label: 'Phytochemical Research', link: '/history' },
+      { label: 'Method Development and Validation', link: '/mdv' },
+      { label: 'Pollutants Research', link: '/pollutant' },
+      { label: 'Food Contaminants Research', link: '/contaminant' },
+      { label: 'Phytochemical Research', link: '/phyto' },
     ],
     Products: [
-      { label: 'Chemxpert', link: '/consulting' },
-      { label: 'Labsoft', link: '/training' },
+      { label: 'Chemxpert', link: '/xpert' },
+      { label: 'Labsoft', link: '/lab' },
     ],
-    Contact: [],
   };
 
   return (
     <header className="bg-black text-white font-serif shadow-lg sticky top-0 left-0 w-full z-50">
       <Wrapper>
         <nav className="flex justify-between items-center px-4 lg:px-16 py-8">
-          {/* Logo */}
-          
-
           {/* Hamburger Menu for Mobile */}
           <div className="lg:hidden">
             <button
@@ -62,6 +58,18 @@ const Navbar = () => {
                   Home
                 </Link>
               </li>
+
+              {/* About Link */}
+              <li>
+                <Link
+                  to="/about"
+                  className="capitalize focus:outline-none hover:text-red-500"
+                >
+                  About
+                </Link>
+              </li>
+
+              {/* Dropdown Menu Links */}
               {Object.keys(menuItems).map((menu) => (
                 <li key={menu} className="relative group">
                   {/* Dropdown Toggle */}
@@ -95,6 +103,16 @@ const Navbar = () => {
                   )}
                 </li>
               ))}
+
+              {/* Contact Link */}
+              <li>
+                <Link
+                  to="/contact"
+                  className="capitalize focus:outline-none hover:text-red-500"
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>

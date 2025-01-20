@@ -23,7 +23,7 @@ const Application = () => {
             <Card
               imgSrc={environment}
               title="Environmental Pollutants"
-              linkTo="/environmental"
+              linkTo="/pollutant"
               description="Detect and quantify pollutants such as heavy metals, pesticides, VOCs, and SVOCs."
             />
 
@@ -40,7 +40,7 @@ const Application = () => {
             <Card
               imgSrc={food}
               title="Food and Water Contaminants"
-              linkTo="/food"
+              linkTo="/contaminant"
               description="Comprehensive analysis of water contaminants, including THMs and heavy metals."
             />
             <Card

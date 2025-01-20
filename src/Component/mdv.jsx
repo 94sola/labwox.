@@ -2,7 +2,9 @@
 
 const Mdv = () => {
     return (
-        <div></div>
+        <div className="h-lvh bg-blue-500">
+
+        </div>
     )
 };
 
