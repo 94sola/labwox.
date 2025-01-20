@@ -1,6 +1,6 @@
 import hero from "../assets/image/hero-bg.jpg";
 
-function Hero() {
+function Chemx () {
   return (
     <div className="relative bg-black text-white overflow-hidden min-h-screen">
       {/* Background Image */}
@@ -21,7 +21,7 @@ function Hero() {
             ChemXPERT
           </h1>
           <p className="text-base sm:text-lg md:text-xl leading-relaxed text-white/90 mb-6 lg:mb-8 animate-fade-in delay-150">
-            Drive impactful discoveries and partner with us on your research journey.
+            We are dedicated to driving excellence in laboratory operations and collaborative research.
           </p>
           <button className="px-3 md:px-4 py-1.5 md:py-2 bg-black text-white font-semibold rounded-full hover:bg-red-900 transition duration-300 text-base md:text-lg lg:text-xl mt-3">
           Learn  more
@@ -60,4 +60,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default Chemx;

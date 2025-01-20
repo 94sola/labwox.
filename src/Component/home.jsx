@@ -1,6 +1,6 @@
 //import React from 'react';
 import Hero from './Hero-pg';
-import Chemxpert from './product';
+import Chemx from './product';
 import Labsoft from './labsoft';
 import WhyPartner from './whypartner';
 import Partner from './partners';
@@ -14,7 +14,7 @@ export default function Home() {
 
       {/* Other Sections */}
       <div className="content-sections">
-        <Chemxpert />
+        <Chemx />
         <WhyPartner />
         <Labsoft />
         <Application />
