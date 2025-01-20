@@ -8,7 +8,7 @@ const Hero = () => {
       {/* Logo at the Top */}
       <div className=" pl-6 mt-2 md:mt-4 lg:mt-6" >
         <Link to="/">
-          <h1 className="lab text-[250px]">labwox<span className="text-red-600">.</span></h1>
+          <h1 className="lab text-[260px]">labwox<span className="text-red-600">.</span></h1>
         </Link>
       </div>
 
