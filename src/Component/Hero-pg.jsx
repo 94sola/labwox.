@@ -22,14 +22,14 @@ const Hero = () => {
           <img
             src={chem}
             alt="Chemxpert"
-            className="w-full h-[180px] md:h-[270px] lg:h-[400px] object-cover rounded-2xl"
+            className="w-full h-[450px] md:h-[60px] lg:h-[700px] object-cover rounded-2xl"
           />
         </div>
       </div>
 
       {/* Text Below the Image */}
-      <div className="w-full lg:w-[40%] mt-6 sm:mt-8 md:mt-16 pl-6 md:pl-14 pb-4 sm:pb-5">
-        <h3 className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-[40px] font-normal font-serif mb-3 leading-relaxed">
+      <div className="w-full lg:w-[60%] mt-6 sm:mt-8 md:mt-16 pl-6 md:pl-14 pb-4 sm:pb-5">
+        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] font-normal font-serif mb-3 leading-relaxed">
           Partner with us on your research journey.
         </h3>
 
