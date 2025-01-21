@@ -2,24 +2,22 @@ import about from "../assets/image/about.jpeg";
 
 const AboutUs = () => {
   return (
-    <div className="block block-cta-hero py-12 px-4 sm:px-8 lg:px-16 xl:px-28">
-      {/* Top Horizontal Line */}
-      <hr className="my-8 border-t-2 border-gray-300 w-full" />
-
+    <div className="font-sans py-12 px-4 sm:px-8 lg:px-16 bg-black text-white">
+      {/* About Us Section */}
       <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
-        {/* Hero Content */}
-        <div className="hero-content text-center lg:text-left mb-8 lg:mb-0 lg:flex-1">
+        {/* Left: Text Content */}
+        <div className="text-center lg:text-left lg:flex-1">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             About Us
           </h1>
-          <p className="subtitle text-base sm:text-lg lg:text-xl text-gray-700 max-w-full sm:max-w-[90%] lg:max-w-[80%] mx-auto lg:mx-0">
+          <p className="text-base sm:text-lg lg:text-xl max-w-full sm:max-w-[70%] lg:max-w-[60%] mx-0 lg:mx-0">
             Labwox provides cutting-edge solutions to support research and
             learning in the chemical sciences.
           </p>
         </div>
 
-        {/* Hero Image */}
-        <div className="hero-image lg:flex-1">
+        {/* Right: Image */}
+        <div className="lg:flex-1">
           <img
             src={about}
             alt="Diverse Cast of Employees"
@@ -28,27 +26,29 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* Bottom Horizontal Line */}
-      <hr className="mt-8 border-t-2 border-gray-300 w-full" />
+      {/* Divider */}
+      <hr className="mt-8 border-t-gray-800 w-full" />
+
+      {/* What We Do Section */}
       <div className="flex flex-col lg:flex-row justify-between items-center gap-8 py-20">
-        {/* Hero Content */}
-        <div className="hero-content text-center lg:text-left mb-8 lg:mb-0 lg:flex-1">
+        {/* Left: Heading */}
+        <div className="text-center lg:text-left lg:flex-1">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-          What <span className="italic text-red-600">We</span> Do
+            What <span className="italic text-red-600">We</span> Do
           </h1>
-         
         </div>
 
-        {/* Hero Image */}
-        <div className="hero-image lg:flex-1">
-            <p className="subtitle text-base sm:text-lg lg:text-xl text-gray-700 max-w-full sm:max-w-[90%] lg:max-w-[80%] mx-auto lg:mx-0">
-            Labwox provides cutting-edge solutions to support research and learning in the physical sciences. We provide leading edge learning content targeted at professionals and scientists who need to upgrade their proficiency both in industry and academics.
-            </p>
-            </div>
+        {/* Right: Description */}
+        <div className="lg:flex-1">
+          <p className="text-base sm:text-lg lg:text-xl max-w-full sm:max-w-[80%] lg:max-w-[80%] mx-0 lg:mx-0">
+            Labwox provides cutting-edge solutions to support research and
+            learning in the physical sciences. We provide leading-edge learning content targeted at professionals and scientists who need to upgrade their proficiency both in industry and academia.
+          </p>
+        </div>
       </div>
 
-      {/* Bottom Horizontal Line */}
-      <hr className="mt-8 border-t-2 border-gray-300 w-full" />
+      {/* Divider */}
+      <hr className="mt-8 border-t-gray-800 w-full" />
     </div>
   );
 };

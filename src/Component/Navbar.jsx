@@ -101,6 +101,7 @@ const Navbar = () => {
           </div>
         </nav>
       </Wrapper>
+      <hr className="border-t-gray-800 " />
     </header>
   );
 };

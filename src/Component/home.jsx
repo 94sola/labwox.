@@ -2,9 +2,10 @@
 import Hero from './Hero-pg';
 import Chemx from './product';
 import Labsoft from './labsoft';
-import WhyPartner from './whypartner';
+import Gallery from './gallery';
+import Testimonial from './Testimony';
 import Partner from './partners';
-import Application from './application';
+import Training from './training';
 
 export default function Home() {
   return (
@@ -15,9 +16,10 @@ export default function Home() {
       {/* Other Sections */}
       <div className="content-sections">
         <Chemx />
-        <WhyPartner />
         <Labsoft />
-        <Application />
+        <Gallery />
+        <Testimonial />
+        <Training />
         <Partner />
       </div>
     </div>
