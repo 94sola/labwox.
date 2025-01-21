@@ -23,30 +23,17 @@ h3 {
     font-style: normal;
 }
 
-.chem h1
- {
- 
-    font-family: "Bebas Neue", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
- 
 
-h6 {
+
+.lab h1  {
   font-family: "PT Sans Narrow", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.nav.ul {
-  font-family: "PT Sans Narrow", sans-serif;
-  font-weight: 400;
+  font-weight: 800;
   font-style: normal;
 }
 
-p 
+footer .par 
   {
-    font-family: "Open Sans", sans-serif;
+    font-family: "PT Sans Narrow", sans-serif;
     font-style: normal;
 
   }
@@ -65,9 +52,9 @@ ul
 
 }  
 
-
-.lab h1 
+.parr p
 {
   font-family: "League Spartan", serif;
 }
+
   
