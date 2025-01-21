@@ -5,7 +5,7 @@ import Ab1 from './ab1'
 
 export default function About() {
   return (
-    <div className="home-page">
+    <div className="bg-black font-sans">
       {/* Hero Section */}
       <Ab1 />
 

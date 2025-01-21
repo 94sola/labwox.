@@ -1,61 +1,88 @@
-import hero from "../assets/image/hero-bg.jpg";
+import arrow from "../assets/image/right-arrow1.png";
+import { Link } from "react-router-dom";
+import method from "../assets/image/method.jpg";
+import pollutant from "../assets/image/pollutant.jpg";
+import food from "../assets/image/food-con.jpg";
+import phyto from "../assets/image/phyto.jpg";
 
-function Chemx () {
+function Chemx() {
+  const cards = [
+    {
+      to: "/mdv",
+      title: "Method Development and Validation",
+      img: method,
+    },
+    {
+      to: "/pollutant",
+      title: "Pollutants",
+      img: pollutant,
+    },
+    {
+      to: "/contaminant",
+      title: "Food Contaminants",
+      img: food,
+    },
+    {
+      to: "/phyto",
+      title: "Phytochemicals",
+      img: phyto,
+    },
+  ];
+
   return (
-    <div className="relative bg-black text-white overflow-hidden min-h-screen">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 w-full h-full bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${hero})`,
-        }}
-      ></div>
-
-      {/* Overlay Effect */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/20"></div>
-
-      {/* Text Section */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4 lg:px-8">
-        <div className="max-w-7xl">
-          <h1 className=" chem text-7xl sm:text-9xl md:text-8xl font-extrabold leading-tight font-serif mb-4 lg:mb-6 text-transparent bg-clip-text bg-white animate-fade-in">
-            ChemXPERT
+    <div className="chemxpert text-white bg-black overflow-hidden pt-14 pb-7 flex-col items-center">
+      {/* Header Section */}
+      <div className="w-full flex flex-col md:flex-row items-center justify-between py-8 px-6 sm:pr-12 md:pr-24 lg:pr-32 sm:pl-8 md:pl-20 lg:pl-24 bg-neutral-800 hover:bg-white hover:text-black font-sans transition duration-300 shadow-lg group">
+        <div className="text-left">
+          <h1 className="text-[60px] sm:text-6xl md:text-7xl lg:text-8xl font-medium leading-loose">
+            CHEMXPERT
           </h1>
-          <p className="text-base sm:text-lg md:text-xl leading-relaxed text-white/90 mb-6 lg:mb-8 animate-fade-in delay-150">
-            We are dedicated to driving excellence in laboratory operations and collaborative research.
-          </p>
-          <button className="px-3 md:px-4 py-1.5 md:py-2 bg-black text-white font-semibold rounded-full hover:bg-red-900 transition duration-300 text-base md:text-lg lg:text-xl mt-3">
-          Learn  more
-        </button>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal leading-relaxed mt-2">
+            Advancing Research Through Collaboration
+          </h2>
+        </div>
+
+        {/* Button & Arrow - Now at Start on Mobile */}
+        <div className="flex items-center gap-8 mt-8 md:mt-0">
+          <Link to="/lab">
+            <button className="px-6 py-2 bg-red-600 text-white font-semibold rounded-full hover:bg-white hover:text-black transition duration-300 text-base sm:text-lg lg:text-xl shadow-md">
+              Learn More
+            </button>
+          </Link>
+          <div className="transition duration-300 filter invert group-hover:invert-0">
+            <img src={arrow} alt="right-arrow"  />
+          </div>
         </div>
       </div>
 
-      {/* Animation Styles */}
-      <style>
-        {`
-          @keyframes fade-in {
-            from {
-              opacity: 0;
-              transform: translateY(10px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
+      {/* Cards Section */}
+      <div className="py-12 px-6 sm:px-12 lg:px-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {cards.map((card, index) => (
+            <Link
+              key={index}
+              to={card.to}
+              className="block rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+            >
+              <div className="relative group cursor-pointer">
+                {/* Image */}
+                <div
+                  className="h-64 sm:h-72 md:h-80 lg:h-96 bg-cover bg-center rounded-md shadow-md transition duration-300 grayscale group-hover:grayscale-0"
+                  style={{ backgroundImage: `url(${card.img})` }}
+                ></div>
 
-          .animate-fade-in {
-            animation: fade-in 1s ease-in-out forwards;
-          }
-
-          .delay-150 {
-            animation-delay: 0.15s;
-          }
-
-          .delay-300 {
-            animation-delay: 0.3s;
-          }
-        `}
-      </style>
+                {/* Title Overlay at Bottom */}
+                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/70 to-transparent p-4 rounded-b-md transition-opacity duration-300 group-hover:bg-opacity-80">
+                  <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-normal pb-10 text-white flex items-center gap-2 group-hover:text-red-400">
+                    {card.title}
+                    <img src={arrow} alt="arrow" className="w-5 h-5 sm:w-7 sm:h-7 transition duration-300 filter invert" />
+                  </h2>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
