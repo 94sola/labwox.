@@ -1,4 +1,3 @@
-//import React from "react";
 import ab2a from "../assets/image/ab2a.png";
 
 const Ab2 = () => {
@@ -14,7 +13,7 @@ const Ab2 = () => {
       alt: "Our Vision",
       title: "Our Vision",
       description:
-        "Labwox is poised to offer science professionals a research method for scientists which opens up new vistas for training and analytical testing.",
+        "We embrace new technologies and approaches to analytical chemistry, and we are committed to continuously improving our practices and services.",
       imgSrc: ab2a,
     },
     {
@@ -24,64 +23,54 @@ const Ab2 = () => {
         "Labwox aggregates the services of a network of commercial analytical laboratories and provides a one-stop shop for scientists and professionals who require analytical testing services to support their work.",
       imgSrc: ab2a,
     },
-    {
-      alt: "Our Careers",
-      title: "Our Careers",
-      description:
-        "We are committed to providing the best possible care for researchers, and we believe that the following values are essential to achieving that goal.",
-      imgSrc: ab2a,
-    },
-    {
-      alt: "Investor Relations",
-      title: "Investor Relations",
-      description:
-        "Profitability and growth give us the freedom to fulfill our mission and vision.",
-      imgSrc: ab2a,
-    },
-    {
-      alt: "Corporate Responsibility Report",
-      title: "Corporate Responsibility Report",
-      description:
-        "Our commitment to sustainability and good corporate citizenship.",
-      imgSrc: ab2a,
-    },
   ];
 
   return (
-    <section className="py-12 px-4 sm:px-8 lg:px-16 bg-gray-50">
+    <div className="font-serif py-12 px-4 sm:px-8 lg:px-16 bg-black text-white">
       {/* Heading */}
-      <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold">Explore Our Core Values</h1>
+      <div className="text-center mb-12">
+        <h1 className="text-3xl sm:text-4xl font-bold font-serif leading-tight">
+          Explore Our Core Values
+        </h1>
       </div>
 
       {/* Cards Container */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {cards.map((card, index) => (
           <div
             key={index}
-            className="clickable-card flex flex-col justify-between bg-gray-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300"
+            className="flex flex-col justify-between bg-gray-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-transform duration-300 transform hover:scale-105"
           >
-            {/* Card Text */}
-            <div className="p-4">
-              <h2 className="text-xl font-semibold mb-2">{card.title}</h2>
-              <p className="text-gray-600">{card.description}</p>
-            </div>
-
             {/* Card Image */}
-            <div>
-              <img
-                src={card.imgSrc}
-                alt={card.alt}
-                className="w-full h-48 object-cover"
-              />
+            <img
+              src={card.imgSrc}
+              alt={card.alt}
+              className="w-full h-48 object-cover"
+            />
+
+            {/* Card Text */}
+            <div className="py-6 px-6 text-black">
+              <h2 className="text-lg sm:text-xl font-semibold mb-4 text-center">
+                {card.title}
+              </h2>
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                {card.description}
+              </p>
             </div>
           </div>
         ))}
       </div>
 
+      {/* Callout Section */}
+      <div className="bg-white text-black mx-auto mt-16 p-10 sm:p-16 lg:p-20 rounded-lg max-w-6xl">
+        <h3 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-medium text-center leading-relaxed">
+          We enable greatness in analytical research everywhere.
+        </h3>
+      </div>
+
       {/* Horizontal Line */}
-      <hr className="mt-12 border-t-2 border-gray-300" />
-    </section>
+      <hr className="mt-12 border-t-gray-600" />
+    </div>
   );
 };
 

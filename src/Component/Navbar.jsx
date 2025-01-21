@@ -84,11 +84,11 @@ const Navbar = () => {
                   </button>
                   {/* Dropdown Menu */}
                   {activeDropdown === menu && (
-                    <ul className="absolute top-full left-0 bg-black text-white mt-2 py-2 shadow-lg rounded-lg z-50 w-48">
+                    <ul className="absolute top-full left-0 bg-black text-white mt-2 py-2 shadow-lg rounded-lg z-50 w-48 ">
                       {menuItems[menu].map((item) => (
                         <li
                           key={item.label}
-                          className="py-2 px-4 hover:bg-gray-800 rounded-lg"
+                          className="py-2 px-4 hover:bg-gray-800 rounded-lg "
                         >
                           <Link to={item.link}>{item.label}</Link>
                         </li>
@@ -101,6 +101,7 @@ const Navbar = () => {
           </div>
         </nav>
       </Wrapper>
+      <hr className="border-t-gray-800 " />
     </header>
   );
 };

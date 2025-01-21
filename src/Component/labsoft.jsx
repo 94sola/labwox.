@@ -1,75 +1,73 @@
-import Wrapper from "../Component/wrapper";
-import labsoft from "../assets/image/labsoft-image.jfif";
+import arrow from "../assets/image/right-arrow1.png";
+import { Link } from "react-router-dom";
 
-const Labsoft = () => {
+function Labsoft() {
   return (
-    <div className="bg-black text-white py-20">
-      <Wrapper>
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-16 md:gap-20">
-          {/* Image Section */}
-          <div className="md:w-1/2 flex justify-center md:justify-start relative pt-14 md:pt-20">
-            <img
-              src={labsoft}
-              alt="LabSoft Illustration"
-              className="w-full max-w-md md:max-w-full h-auto rounded-lg shadow-2xl transition-transform duration-300 transform hover:scale-105"
-            />
-            <div className="absolute inset-0 rounded-lg border-4 border-transparent hover:border-gray-500 transition duration-300"></div>
-          </div>
+    <div className="chemxpert text-black elative bg-black overflow-hidden pt-12 pb-10 flex flex-col items-center">
+      {/* Full-width Neutral Background */}
+      <div className="w-full flex flex-col md:flex-row items-center justify-between py-8 px-6 sm:pr-12 md:pr-24 lg:pr-32 sm:pl-8 md:pl-20 lg:pl-24 bg-white hover:bg-neutral-800 hover:text-black font-sans transition duration-300 shadow-lg rounded-none group">
+        {/* Left side: Heading */}
+        <div className="text-left group-hover:text-gray-200">
+          <h1 className="text-[60px] sm:text-6xl md:text-7xl lg:text-8xl font-medium leading-loose">
+            LABSOFT
+          </h1>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal leading-relaxed mt-2">
+          Lab Productivity Solution
+          </h2>
+        </div>
 
-          {/* Text Section */}
-          <div className="md:w-1/2 flex flex-col gap-8">
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-              Lab Productivity Solutions with LabSoft
-            </h1>
-            <p className="text-lg leading-relaxed text-gray-300">
-              LabSoft is our proprietary laboratory productivity platform designed to revolutionize how labs manage reporting, workflow, and projects.
-             
-            </p>
-            <div>
-            <a
-                href="https://labsoft-report-app.vercel.app/sign-up"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" btn inline-block px-3 py-1 bg-gradient-to-r from-purple-400 to-pink-600 hover:bg-neutral-900 text-white font-light text-sm rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300"
-                >
-                Learn More
-              </a>
-            </div>
-            <h6 className="text-xl font-semibold  text-white group-hover:text-purple-400 transition duration-300">
-              With LabSoft, laboratories can:
-            </h6>
-
-            <ul className="space-y-8">
-              <li className="group">
-                <h5 className="text-lg font-semibold mb-2 text-white group-hover:text-purple-400 transition duration-300">
-                  Streamline Reporting
-                </h5>
-                <p className="text-gray-200 text-sm">
-                  Automate data collection and report generation for quick, accurate dissemination of findings.
-                </p>
-              </li>
-              <li className="group">
-                <h5 className="text-lg font-semibold mb-2 text-white group-hover:text-purple-400 transition duration-300">
-                  Enhance Project Management
-                </h5>
-                <p className="text-gray-200 text-sm">
-                  Track and manage multiple projects simultaneously, ensuring timely progress and compliance with research objectives.
-                </p>
-              </li>
-              <li className="group">
-                <h5 className="text-lg font-semibold mb-2 text-white group-hover:text-purple-400 transition duration-300">
-                  Boost Efficiency
-                </h5>
-                <p className="text-gray-200 text-sm">
-                  Minimize manual tasks, reduce human error, and free up valuable time for analytical and creative work.
-                </p>
-              </li>
-            </ul>
+        {/* Right side: Button & Arrow */}
+        <div className="flex items-center gap-8 mt-8 md:mt-0">
+          <Link to="/lab">
+            <button className="px-6 py-2 bg-red-600 text-white font-semibold rounded-full hover:bg-white hover:text-black transition duration-300 text-base sm:text-lg lg:text-xl shadow-md">
+              Learn More
+            </button>
+          </Link>
+          {/* Arrow - Changes Color on Hover */}
+          <div className="transition duration-300 group-hover:filter group-hover:invert">
+            <Link to="/lab">
+              <img src={arrow} alt="right-arrow" />
+            </Link>
           </div>
         </div>
-      </Wrapper>
+      </div>
+
+      {/* Section for H3 and Lists */}
+      <div className="w-full my-20 px-6 text-white sm:px-12 lg:px-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 text-left">
+          {/* Column 1 */}
+          <div>
+            <h3 className="text-xl hover:text-red-500 text-slate-200 sm:text-2xl font-normal mb-4">
+              Project Management Made Easy
+            </h3>
+            <p className="text-sm font-light text-gray-400 sm:text-base lg:text-lg leading-relaxed">
+              Organize your lab’s activities seamlessly with tools for task delegation, progress tracking, and deadline management.
+            </p>
+          </div>
+
+          {/* Column 2 */}
+          <div>
+            <h3 className="text-xl text-slate-200 hover:text-red-500 sm:text-2xl font-medium mb-4">
+              Streamlined Reporting
+            </h3>
+            <p className="text-sm font-light text-gray-400 sm:text-base lg:text-lg leading-relaxed">
+              Generate comprehensive reports with a few clicks, ensuring accuracy and professional presentation every time.
+            </p>
+          </div>
+
+          {/* Column 3 */}
+          <div>
+            <h3 className="text-xl text-slate-200 hover:text-red-500 sm:text-2xl font-medium mb-4">
+              Data Security and Compliance
+            </h3>
+            <p className="text-sm font-light text-gray-400 sm:text-base lg:text-lg leading-relaxed">
+              Labsoft ensures your data is secure and complies with industry standards for quality assurance and reporting.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
-};
+}
 
 export default Labsoft;

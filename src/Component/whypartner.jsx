@@ -1,88 +1,65 @@
-import Wrapper from "../Component/wrapper";
+import arrow from "../assets/image/down-arrow.png";
 import collaboration from "../assets/image/collaboration.png";
 import network from "../assets/image/network.png";
 import support from "../assets/image/support.png";
 
 const WhyPartner = () => {
   return (
-    <div className="bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-24 px-6 md:px-12">
-      <Wrapper>
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white to-red-700">
-            Why Partner with Us?
-          </h1>
-          <p className="text-gray-400 text-base md:text-lg mt-4 max-w-2xl mx-auto">
-            Discover how our expertise and resources can elevate your projects and ensure exceptional results.
-          </p>
-        </div>
+    <div className="bg-neutral-900 min-h-screen font-sans text-white py-16 px-6 md:px-16 flex flex-col md:flex-row items-center relative">
+      {/* Horizontal Line Across the Top */}
+      <hr className="absolute top-0 left-0 w-full border-t-2 border-gray-500" />
 
-        {/* Content Section */}
-        <div className="flex flex-col md:flex-row items-stretch justify-between gap-16 md:gap-12">
-          {/* Left Column */}
-          <div className="flex flex-col gap-12 w-full md:w-1/2">
-            {/* Technical Expertise */}
-            <div className="flex flex-col items-center text-center space-y-6">
-              <img
-                src={support}
-                alt="Technical Expertise"
-                className="w-20 md:w-24 h-auto transform hover:scale-110 transition duration-300"
-              />
-              <h3 className="text-2xl font-bold text-white">
-                Technical Expertise
-              </h3>
-              <p className="text-gray-300 text-base leading-relaxed max-w-lg">
-                Our team brings deep knowledge and practical experience in analytical chemistry, environmental science, and laboratory operations.
-              </p>
-            </div>
+      {/* Left Section: Title & Description */}
+      <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left space-y-6">
+        <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-white">
+          Why Partner <br /> with Us
+        </h1>
+        <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-md">
+          Discover how our expertise and resources can elevate your projects and ensure exceptional results.
+        </p>
+      </div>
+         {/* Vertical Divider Connected to Horizontal Line */}
+      <div className="hidden md:block absolute top-0 left-1/2 w-[2px] -mx-28 bg-gray-500 h-full"></div>
 
-            {/* Comprehensive Network */}
-            <div className="flex flex-col items-center text-center space-y-6">
-              <img
-                src={network}
-                alt="Comprehensive Network"
-                className="w-20 md:w-24 h-auto transform hover:scale-110 transition duration-300"
-              />
-              <h3 className="text-2xl font-bold white">
-                Comprehensive Network
-              </h3>
-              <p className="text-gray-300 text-base leading-relaxed max-w-lg">
-                Leveraging our established network of state-of-the-art laboratory facilities, we deliver precise, reliable results.
-              </p>
-            </div>
+      {  /* Right Section: Features */} 
+      {/* Right Section: Features with Arrow Divider */}
+      <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left space-y-12 mt-10 md:mt-0">
+        {[{
+            img: support,
+            title: "Technical Expertise",
+            desc: "Our team brings deep knowledge and practical experience in analytical chemistry, environmental science, and laboratory operations."
+          },
+          {
+            img: network,
+            title: "Comprehensive Network",
+            desc: "Leveraging our established network of state-of-the-art laboratory facilities, we deliver precise, reliable results."
+          },
+          {
+            img: collaboration,
+            title: "Collaborative Approach",
+            desc: "We work alongside your team, fostering joint publications, grant applications, and impactful research outcomes."
+          }
+        ].map((item, index) => (
+          <div key={index} className="flex flex-col items-center md:items-start text-center md:text-left space-y-4">
+            <img
+              src={item.img}
+              alt={item.title}
+              className="w-28 md:w-32 h-auto transform hover:scale-110 transition duration-300"
+            />
+            <h3 className="text-3xl font-bold text-white">{item.title}</h3>
+            <p className="text-gray-300 text-lg leading-relaxed max-w-lg">
+              {item.desc}
+            </p>
+
+            {/* Image Arrow Divider Between Sections */}
+            {index < 2 && (
+              <div className="flex justify-center items-center my-6">
+                <img src={arrow} alt="Arrow Divider" className="w-10 md:w-12 h-auto opacity-60" />
+              </div>
+            )}
           </div>
-
-          {/* Vertical Line with Animated Dots */}
-          <div className="hidden md:flex items-center justify-center">
-            <div className="relative h-full w-2 bg-gray-700">
-              {/* Top Dot */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-white w-6 h-6 rounded-full animate-bounce"></div>
-              {/* Middle Dot */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-6 h-6 rounded-full animate-pulse"></div>
-              {/* Bottom Dot */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-white w-6 h-6 rounded-full animate-bounce delay-200"></div>
-            </div>
-          </div>
-
-          {/* Right Column */}
-          <div className="flex flex-col gap-12 w-full md:w-1/2">
-            {/* Collaborative Approach */}
-            <div className="flex flex-col items-center text-center space-y-6 pt-24">
-              <img
-                src={collaboration}
-                alt="Collaborative Approach"
-                className="w-20 md:w-24 h-auto transform hover:scale-110 transition duration-300"
-              />
-              <h3 className="text-2xl font-bold text-pwhite">
-                Collaborative Approach
-              </h3>
-              <p className="text-gray-300 text-base leading-relaxed max-w-lg">
-                We work alongside your team, fostering joint publications, grant applications, and impactful research outcomes.
-              </p>
-            </div>
-          </div>
-        </div>
-      </Wrapper>
+        ))}
+      </div>
     </div>
   );
 };
