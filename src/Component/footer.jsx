@@ -14,7 +14,7 @@ const Footer = () => {
                     <div className="flex flex-col lg:flex-row justify-between gap-12">
                         <div className="flex-1">
                             <Link to="/">
-                                <p className="text-3xl font-bold sm:text-2xl">
+                                <p className="par text-3xl font-bold sm:text-2xl">
                                     labwox<span className="text-red-600 text-4xl font-extrabold sm:text-2xl">.</span>
                                 </p>
                             </Link>
