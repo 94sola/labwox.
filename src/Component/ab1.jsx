@@ -30,6 +30,25 @@ const AboutUs = () => {
 
       {/* Bottom Horizontal Line */}
       <hr className="mt-8 border-t-2 border-gray-300 w-full" />
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-8 py-20">
+        {/* Hero Content */}
+        <div className="hero-content text-center lg:text-left mb-8 lg:mb-0 lg:flex-1">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          What <span className="italic text-red-600">We</span> Do
+          </h1>
+         
+        </div>
+
+        {/* Hero Image */}
+        <div className="hero-image lg:flex-1">
+            <p className="subtitle text-base sm:text-lg lg:text-xl text-gray-700 max-w-full sm:max-w-[90%] lg:max-w-[80%] mx-auto lg:mx-0">
+            Labwox provides cutting-edge solutions to support research and learning in the physical sciences. We provide leading edge learning content targeted at professionals and scientists who need to upgrade their proficiency both in industry and academics.
+            </p>
+            </div>
+      </div>
+
+      {/* Bottom Horizontal Line */}
+      <hr className="mt-8 border-t-2 border-gray-300 w-full" />
     </div>
   );
 };

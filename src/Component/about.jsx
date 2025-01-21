@@ -1,6 +1,6 @@
 
 
-
+import Ab2 from './ab2';
 import Ab1 from './ab1'
 
 export default function About() {
@@ -11,7 +11,7 @@ export default function About() {
 
       {/* Other Sections */}
       <div className="content-sections">
-       
+       <Ab2 />
       </div>
     </div>
   );
