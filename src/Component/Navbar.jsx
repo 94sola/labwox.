@@ -25,6 +25,10 @@ const Navbar = () => {
       { label: 'Chemxpert', link: '/xpert' },
       { label: 'Labsoft', link: '/lab' },
     ],
+    Contacts: [
+      { label: 'Contact us', link: '/contact' },
+      { label: 'About us', link: '/about' },
+    ],
   };
 
   return (
@@ -59,16 +63,6 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              {/* About Link */}
-              <li>
-                <Link
-                  to="/about"
-                  className="capitalize focus:outline-none hover:text-red-500"
-                >
-                  About
-                </Link>
-              </li>
-
               {/* Dropdown Menu Links */}
               {Object.keys(menuItems).map((menu) => (
                 <li key={menu} className="relative group">
@@ -89,7 +83,7 @@ const Navbar = () => {
                     )}
                   </button>
                   {/* Dropdown Menu */}
-                  {activeDropdown === menu && menuItems[menu].length > 0 && (
+                  {activeDropdown === menu && (
                     <ul className="absolute top-full left-0 bg-black text-white mt-2 py-2 shadow-lg rounded-lg z-50 w-48">
                       {menuItems[menu].map((item) => (
                         <li
@@ -103,16 +97,6 @@ const Navbar = () => {
                   )}
                 </li>
               ))}
-
-              {/* Contact Link */}
-              <li>
-                <Link
-                  to="/contact"
-                  className="capitalize focus:outline-none hover:text-red-500"
-                >
-                  Contact
-                </Link>
-              </li>
             </ul>
           </div>
         </nav>

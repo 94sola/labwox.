@@ -1,14 +1,15 @@
-//import React from "react";
 import { Link } from "react-router-dom";
 import chem from "../assets/image/chemxpert-imge.jpg";
 
 const Hero = () => {
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col px-4">
+    <div className="bg-black text-white flex flex-col px-4">
       {/* Logo at the Top */}
-      <div className=" pl-6 mt-2 md:mt-4 lg:mt-6" >
+      <div className="pl-6">
         <Link to="/">
-          <h1 className="lab text-[260px]">labwox<span className="text-red-600">.</span></h1>
+          <h1 className="lab text-[200px] leading-none">
+            labwox<span className="text-red-600">.</span>
+          </h1>
         </Link>
       </div>
 
@@ -21,14 +22,14 @@ const Hero = () => {
           <img
             src={chem}
             alt="Chemxpert"
-            className="w-full h-[300px] md:h-[500px] lg:h-[700px] object-cover rounded-2xl"
+            className="w-full h-[200px] md:h-[300px] lg:h-[500px] object-cover rounded-2xl"
           />
         </div>
       </div>
 
       {/* Text Below the Image */}
       <div className="w-full lg:w-[70%] mt-6 sm:mt-8 md:mt-16 pl-6 md:pl-14 pb-4 sm:pb-5">
-        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[70px] font-normal font-serif mb-3 leading-relaxed">
+        <h3 className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-[40px] font-normal font-serif mb-3 leading-relaxed">
           Drive impactful discoveries and partner with us on your research journey.
         </h3>
 
